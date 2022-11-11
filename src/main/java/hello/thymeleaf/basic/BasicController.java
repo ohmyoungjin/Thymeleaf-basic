@@ -93,7 +93,11 @@ public class BasicController {
 
     @GetMapping("/attribute")
     public String attribute(Model model) {
-        model.addAttribute("flag", true);
+        Map<String, String> map = new HashMap<>();
+        map.put("one", "true");
+        map.put("two", "false");
+
+        model.addAttribute("flag", map);
         return "basic/attribute";
     }
 
