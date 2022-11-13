@@ -5,6 +5,10 @@
   <title>Title</title>
 </head>
 <body>
+<!--/*
+  for each로만 해결하기 불편할 때 thymeleaf 에서 제공하는 tag 이다 .
+  안에 있는 뭉텅이당 for문을 돌릴 수 있게 해준다.
+*/-->
 <th:comments th:each="user : ${users}">
   <div>
     사용자 이름1 <span th:text="${user.username}"></span>
