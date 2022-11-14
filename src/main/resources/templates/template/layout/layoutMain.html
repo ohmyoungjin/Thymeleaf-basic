@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--
+    이 부분에 의해서 layoutMain을 호출했지만 base가 기본이 되고
+    layoutMain이 참조하고 있는 link 부분이 추가된 것 처럼보인다
+    흐름 layoutMain => base가 base가 되고 layoutMain에 있는 link가
+    base.html에 추가된 것으로 보임
+
+!-->
+<head th:replace="template/layout/base :: common_header(~{::title},~{::link})">
+  <title>메인 타이틀</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <link rel="stylesheet" th:href="@{/themes/smoothness/jquery-ui.css}">
+</head>
+<body>
+메인 컨텐츠
+</body>
+</html>
